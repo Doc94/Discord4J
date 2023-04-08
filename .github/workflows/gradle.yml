@@ -12,6 +12,7 @@ on:
       - '3.0.x'
       - '3.1.x'
       - '3.2.x'
+      - 'Doc94-patch-1'
     tags-ignore:
       - '*.*'
   pull_request:
@@ -33,8 +34,10 @@ jobs:
       - name: PR Check (PR Blocked by Dependency)
         if: ${{ contains(toJson(github.event.pull_request.labels.*.name), 'PR depends on PR') }}
         run: |
-            echo "This PR is marked blocked because depends in another PR."
-            exit 0
+            echo '### ¡Build Failed! ❌' >> $GITHUB_STEP_SUMMARY
+            echo 'This PR depends of another PR to build correctly.' >> $GITHUB_STEP_SUMMARY
+            echo "::error::This PR is blocked to build because depends in another PR."
+            exit -1
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
         with:
@@ -55,32 +58,30 @@ jobs:
     if: ${{ github.event_name != 'pull_request' && github.repository != 'Discord4J/Discord4J' }}
     needs: build
     env:
-      HAVE_SONAR_DATA: ${{ secrets.signingKey != '' && secrets.signingPassword != '' && secrets.sonatypeUsername != '' && secrets.sonatypePassword != '' }}
+        HAVE_SONAR_DATA: ${{ secrets.signingKey != '' && secrets.signingPassword != '' && secrets.sonatypeUsername != '' && secrets.sonatypePassword != '' }}
     steps:
-      - name: Validate publish secrets
-        if: ${{ env.HAVE_SONAR_TOKEN != 'true' }}
+      - name: Validate repository secrets for publish
+        if: ${{ env.HAVE_SONAR_DATA != 'true' }}
         run: |
-          echo "The secrets for publish are not set."
-          exit 0
+            echo '### ¡Release Failed! ❌' >> $GITHUB_STEP_SUMMARY
+            echo 'The repository not has the required tokens set (signingKey, signingPassword, sonatypeUsername ir sonatypePassword).' >> $GITHUB_STEP_SUMMARY
+            echo "::error::The repository not has the required tokens set (signingKey, signingPassword, sonatypeUsername ir sonatypePassword)."
+            exit -1
       - uses: actions/checkout@v3
-        if: ${{ env.HAVE_SONAR_DATA == 'true' }}
         with:
           fetch-depth: 0
       - uses: actions/cache@v3
-        if: ${{ env.HAVE_SONAR_DATA == 'true' }}
         with:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
       - name: Set up JDK
-        if: ${{ env.HAVE_SONAR_DATA == 'true' }}
         uses: actions/setup-java@v3
         with:
           java-version: 11
           distribution: 'temurin'
       - name: Publish with Gradle
-        if: ${{ env.HAVE_SONAR_DATA == 'true' }}
         run: ./gradlew -x test publish
         env:
           ORG_GRADLE_PROJECT_signingKey: ${{ secrets.signingKey }}
