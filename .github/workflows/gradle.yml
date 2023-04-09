@@ -51,7 +51,7 @@ jobs:
   release:
     name: Publish artifacts
     runs-on: ubuntu-latest
-    if: ${{ github.event_name != 'pull_request' && ( env.RUN_RELEASE_ON_PUSH == 'true' || contains(github.event.head_commit.message, '[release]') ) }}
+    if: ${{ github.event_name != 'pull_request' && ( (vars.runReleaseOnPush || 'true') == 'true' || contains(github.event.head_commit.message, '[release]') ) }}
     needs: build
     env:
         RUN_RELEASE_ON_PUSH: ${{ vars.runReleaseOnPush || 'true' }}
