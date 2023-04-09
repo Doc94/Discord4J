@@ -12,6 +12,7 @@ on:
       - '3.0.x'
       - '3.1.x'
       - '3.2.x'
+      - 'Doc94-patch-1'
     tags-ignore:
       - '*.*'
   pull_request:
