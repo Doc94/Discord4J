@@ -74,11 +74,21 @@ public class RestChannel {
      *
      * @param restClient REST API resources
      * @param id the ID of this channel
+     *
+     * @return an instance of {@link RestChannel}
      */
     public static RestChannel create(RestClient restClient, Snowflake id) {
         return new RestChannel(restClient, id.asLong());
     }
 
+    /**
+     * Create a {@link RestChannel} with the given parameters.
+     *
+     * @param restClient REST API resources
+     * @param id the ID of this channel
+     *
+     * @return an instance of {@link RestChannel}
+     */
     static RestChannel create(RestClient restClient, long id) {
         return new RestChannel(restClient, id);
     }
@@ -414,6 +424,7 @@ public class RestChannel {
     /**
      * Request to delete this permission overwrite while optionally specifying a reason.
      *
+     * @param targetId the {@link Snowflake} of the channel
      * @param reason the reason, if present.
      * @return a {@link Mono} where, upon successful completion, emits nothing; indicating the permission overwrite has
      * been deleted. If an error is received, it is emitted through the {@code Mono}.
@@ -463,6 +474,7 @@ public class RestChannel {
     /**
      * Request to pin a message in this channel.
      *
+     * @param messageId the {@link Snowflake} of the message
      * @return A {@link Mono} where, upon successful completion, emits nothing; indicating the messaged was pinned. If
      * an error is received, it is emitted through the {@code Mono}.
      */
@@ -473,6 +485,7 @@ public class RestChannel {
     /**
      * Request to unpin a message in this channel.
      *
+     * @param messageId the {@link Snowflake} of the message
      * @return A {@link Mono} where, upon successful completion, emits nothing; indicating the message was unpinned. If
      * an error is received, it is emitted through the {@code Mono}.
      */

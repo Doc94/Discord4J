@@ -80,6 +80,8 @@ public interface Channel extends Entity {
 
     /**
      * Return a {@link RestChannel} handle to execute REST API operations on this entity.
+     *
+     * @return the {@link RestChannel} of this channel
      */
     RestChannel getRestChannel();
 
@@ -200,7 +202,7 @@ public interface Channel extends Entity {
         /**
          * Gets the shift amount associated to this bit value
          *
-         * @return N in 1 << N that is the bit value for this flag
+         * @return N in 1 {@literal <<} N that is the bit value for this flag
          */
         public int getShiftValue() {
             return shiftValue;
@@ -216,7 +218,7 @@ public interface Channel extends Entity {
         }
 
         /**
-         * Translate a bitfield value into an {@link EnumSet < ForumChannelFlag >} related to known flags
+         * Translate a bitfield value into an {@link EnumSet<Flag>} related to known flags
          *
          * @param bitfield An integer representing the flags, one per bit
          * @return An {@link EnumSet<Flag>} of known flags associated to this bit field
@@ -233,7 +235,7 @@ public interface Channel extends Entity {
         }
 
         /**
-         * Translates an {@link EnumSet< Flag >} to a binary bitfield
+         * Translates an {@link EnumSet<Flag>} to a binary bitfield
          *
          * @param flags Set of known forum channel flags
          * @return An integer representing the given set as an integer

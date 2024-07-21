@@ -35,7 +35,7 @@ import discord4j.gateway.ShardInfo;
  * <p>
  * This is not directly dispatched by Discord, but is a utility specialization of {@link InteractionCreateEvent}.
  * <p>
- * <img src="doc-files/InteractionCreateEvent.png">
+ * <img alt="InteractionCreateEvent" src="doc-files/InteractionCreateEvent.png">
  */
 @Experimental
 public class AutoCompleteInteractionEvent extends InteractionCreateEvent {

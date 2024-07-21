@@ -44,7 +44,7 @@ import java.util.Collection;
  * This is not directly dispatched by Discord, but is a utility specialization of
  * {@link ApplicationCommandInteractionEvent}.
  * <p>
- * <img src="doc-files/InteractionCreateEvent.png">
+ * <img alt="InteractionCreateEvent" src="doc-files/InteractionCreateEvent.png">
  */
 @Experimental
 public class MessageInteractionEvent extends ApplicationCommandInteractionEvent {

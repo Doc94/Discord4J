@@ -143,6 +143,7 @@ public class ResolvedChannel implements DiscordObject {
      * Retrieves the full {@link Channel} instance corresponding to this resolved channel, using the given retrieval
      * strategy.
      *
+     * @param retrievalStrategy the retrieval strategy.
      * @return a {@link Mono} where, upon successful completion, emits the full {@link Channel} instance corresponding
      * to this resolved channel. If an error is received, it is emitted through the {@code Mono}.
      */

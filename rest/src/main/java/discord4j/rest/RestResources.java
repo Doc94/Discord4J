@@ -51,6 +51,7 @@ public class RestResources {
     /**
      * Create a {@link RestResources} instance with the given resources.
      *
+     * @param scheme the authorization scheme
      * @param token the bot token used to authenticate requests
      * @param reactorResources Reactor resources to establish connections and schedule tasks
      * @param jacksonResources Jackson data-binding resources to map objects

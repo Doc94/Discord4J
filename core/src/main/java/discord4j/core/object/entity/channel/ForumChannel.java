@@ -267,9 +267,9 @@ public final class ForumChannel extends BaseTopLevelGuildChannel implements Cate
     }
 
     /**
-     * Sort orders are proposed by Discord to choose the order or threads in a Forum channel
-     * <br/>
-     * Please see <a href="https://discord.com/developers/docs/resources/channel#channel-object-sort-order-types">Discord documentation</a> for further details
+     * Sort orders are proposed by Discord to choose the order or threads in a Forum channel.
+     *
+     * @see <a href="https://discord.com/developers/docs/resources/channel#channel-object-sort-order-types">Discord documentation</a>
      */
     public enum SortOrder {
 

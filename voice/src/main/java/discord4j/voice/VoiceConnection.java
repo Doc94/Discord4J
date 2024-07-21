@@ -100,6 +100,7 @@ public interface VoiceConnection {
      * Implementations can use this to differentiate between a RESUME action (that does not tear down UDP resources)
      * or a full RECONNECT.
      *
+     * @param errorCause a Function for the custom {@link Throwable} as cause
      * @return a {@link Mono} that, upon subscription, attempts to reconnect to the voice gateway, maintaining the same
      * parameters currently associated to this instance
      */

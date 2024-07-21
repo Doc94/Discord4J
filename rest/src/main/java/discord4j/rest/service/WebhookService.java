@@ -100,7 +100,10 @@ public class WebhookService extends RestService {
     /**
      * Executes the specified webhook.
      *
+     * @param webhookId the webhook id
+     * @param token the webhook token
      * @param wait true if you want to return message data and errors for the webhook.
+     * @param request the request
      * @return If wait is true, a mono that contains the message information of the execution or an
      * error if the webhook is unsuccessful. If wait is false, the mono completes as soon as the request
      * is finished sending, and DOES NOT result in an error if the message is not saved.
@@ -119,8 +122,11 @@ public class WebhookService extends RestService {
     /**
      * Executes the specified webhook.
      *
+     * @param webhookId the webhook id
+     * @param token the webhook token
      * @param wait true if you want to return message data and errors for the webhook.
      * @param threadId specify the thread id within a webhook's channel.
+     * @param request the request
      * @return If wait is true, a mono that contains the message information of the execution or an
      * error if the webhook is unsuccessful. If wait is false, the mono completes as soon as the request
      * is finished sending, and DOES NOT result in an error if the message is not saved.

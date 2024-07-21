@@ -98,6 +98,7 @@ public class ReactorResources {
          * Sets the underlying {@link HttpClient} to use. A default can be created from
          * {@link ReactorResources#DEFAULT_HTTP_CLIENT}.
          *
+         * @param httpClient {@link HttpClient} to use
          * @return This builder, for chaining.
          */
         public Builder httpClient(HttpClient httpClient) {
@@ -109,6 +110,7 @@ public class ReactorResources {
          * Sets the time-capable {@link Scheduler} to use. A default can be created from
          * {@link ReactorResources#DEFAULT_TIMER_TASK_SCHEDULER}.
          *
+         * @param timerTaskScheduler {@link Scheduler} to use
          * @return This builder, for chaining.
          */
         public Builder timerTaskScheduler(Scheduler timerTaskScheduler) {
@@ -120,6 +122,7 @@ public class ReactorResources {
          * Sets the {@link Scheduler} to use for potentially blocking tasks. A default can be created from
          * {@link ReactorResources#DEFAULT_BLOCKING_TASK_SCHEDULER}.
          *
+         * @param blockingTaskScheduler {@link Scheduler} to use for potentially blocking tasks
          * @return This builder, for chaining.
          */
         public Builder blockingTaskScheduler(Scheduler blockingTaskScheduler) {

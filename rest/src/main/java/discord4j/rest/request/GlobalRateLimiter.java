@@ -51,6 +51,7 @@ public interface GlobalRateLimiter {
      * Sets a new rate limit that will be applied to every operation performed using {@link #withLimiter(Publisher)}.
      *
      * @param duration the {@link Duration} every new operation should wait before being used
+     * @return A {@link Mono} that signals completion upon successful update.
      */
     Mono<Void> rateLimitFor(Duration duration);
 

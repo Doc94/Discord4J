@@ -64,6 +64,7 @@ public interface TopLevelGuildMessageChannel extends CategorizableChannel, Guild
      * Requests to create a webhook. Properties specifying how to create the webhook can be set via the {@code withXxx}
      * methods of the returned {@link WebhookCreateMono}.
      *
+     * @param name the name of webhook
      * @return A {@link Mono} where, upon successful completion, emits the created {@link Webhook}. If an error is
      * received, it is emitted through the {@code Mono}.
      */

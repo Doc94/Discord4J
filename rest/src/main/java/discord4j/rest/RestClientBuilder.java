@@ -56,6 +56,7 @@ public class RestClientBuilder<C, O extends RouterOptions> {
      * Initialize a new builder with the given token.
      *
      * @param token the bot token used to authenticate to Discord
+     * @return a new instance of {@link RestClientBuilder}
      */
     public static RestClientBuilder<RestClient, RouterOptions> createRest(String token) {
         Function<Config, RestClient> clientFactory = config -> {

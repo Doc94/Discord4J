@@ -53,7 +53,7 @@ import reactor.util.annotation.Nullable;
  *
  * @see <a href="https://discord.com/developers/docs/topics/gateway#interaction-create">Interaction Create</a>
  * <p>
- * <img src="doc-files/InteractionCreateEvent.png">
+ * <img alt="InteractionCreateEvent" src="doc-files/InteractionCreateEvent.png">
  */
 @Experimental
 public class InteractionCreateEvent extends Event {
@@ -77,7 +77,7 @@ public class InteractionCreateEvent extends Event {
     /**
      * Gets the {@link discord4j.core.object.entity.User} associated with the event.
      * The User is retrieved from the {@link #getInteraction} method.
-     * 
+     *
      * @return The {@link discord4j.core.object.entity.User} associated with the event.
      */
     public User getUser() {

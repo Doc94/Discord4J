@@ -195,6 +195,7 @@ public class ResolvedMember implements DiscordObject {
      * Retrieves the full {@link Member} instance corresponding to this resolved member, using the given retrieval
      * strategy.
      *
+     * @param retrievalStrategy the retrieval strategy.
      * @return a {@link Mono} where, upon successful completion, emits the full {@link Member} instance corresponding to
      * this resolved member. If an error is received, it is emitted through the {@code Mono}.
      */

@@ -387,6 +387,7 @@ public class GatewayDiscordClient implements EntityRetriever {
      * Update the bot's {@link Presence} (status) for the given shard index, provided it belongs in this shard group.
      *
      * @param clientPresence The updated client presence.
+     * @param shardId the shard index
      * @return A {@link Mono} that signals completion upon successful update. If an error is received, it is emitted
      * through the {@code Mono}.
      */
@@ -504,6 +505,7 @@ public class GatewayDiscordClient implements EntityRetriever {
      * Move the {@link Member} represented by this {@link GatewayDiscordClient} to the stage speakers.
      * Requires the {@link Member} to be connected to a {@link StageChannel}
      *
+     * @param guildId the ID of the guild
      * @return A {@link Mono} that upon subscription, will move the {@link Member} represented by this
      * {@link GatewayDiscordClient} to the stage speakers.
      */
@@ -518,6 +520,7 @@ public class GatewayDiscordClient implements EntityRetriever {
      * Move the {@link Member} represented by this {@link GatewayDiscordClient} to the stage audience.
      * Requires the {@link Member} to be connected to a {@link StageChannel}
      *
+     * @param guildId the ID of the guild
      * @return A {@link Mono} that upon subscription, will move the {@link Member} represented by this
      * {@link GatewayDiscordClient} to the stage audience.
      */

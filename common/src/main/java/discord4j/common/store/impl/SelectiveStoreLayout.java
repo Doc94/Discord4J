@@ -40,7 +40,9 @@ public class SelectiveStoreLayout implements StoreLayout {
      * Refer to {@link StoreFlag} values to understand each affected store operation.
      *
      * @param enabledStoreFlags a set of values indicating how to partially enable the delegate capabilities
+     * @param <U> {@link DataAccessor} {@literal &} {@link GatewayDataUpdater}
      * @param delegate a delegate for store queries and updates
+     * @return a new {@link StoreLayout} instance
      */
     public static <U extends DataAccessor & GatewayDataUpdater> StoreLayout create(EnumSet<StoreFlag> enabledStoreFlags, U delegate) {
         return new SelectiveStoreLayout(enabledStoreFlags, delegate, delegate);
@@ -53,6 +55,7 @@ public class SelectiveStoreLayout implements StoreLayout {
      * @param enabledFlags a set of values indicating how to partially enable the delegate capabilities
      * @param dataAccessor a delegate for store queries
      * @param gatewayDataUpdater a delegate for store updates
+     * @return a new {@link StoreLayout} instance
      */
     public static StoreLayout create(EnumSet<StoreFlag> enabledFlags,
                                      DataAccessor dataAccessor,

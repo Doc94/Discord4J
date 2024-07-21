@@ -32,6 +32,7 @@ public interface PayloadHandler<T extends PayloadData> {
      * Perform an action on a payload together with its context, which allows access to various gateway resources.
      *
      * @param context the payload's gateway context
+     * @return a Void Mono
      */
     Mono<Void> handle(GatewayPayload<T> context);
 }

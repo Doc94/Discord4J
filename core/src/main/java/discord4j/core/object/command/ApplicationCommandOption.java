@@ -174,7 +174,7 @@ public class ApplicationCommandOption implements DiscordObject {
 
     /**
      * Returns a list of acceptable channel types the user may pick
-     * </p>
+     * <br>
      * Only applies to CHANNEL type options, if empty, no restriction on channel types is placed.
      * @return A list of channel types a user may pick. Empty list means no restriction is applied.
      */
@@ -188,7 +188,7 @@ public class ApplicationCommandOption implements DiscordObject {
 
     /**
      * Whether this option supports auto-complete or not. Default is false.
-     * </p>
+     * <br>
      * Autocomplete cannot be enabled on options that have choices.
      * @return Whether this option supports auto-complete or not.
      */
@@ -198,7 +198,7 @@ public class ApplicationCommandOption implements DiscordObject {
 
     /**
      * Returns the minimum value a user is allowed to input, represented as a {@link Double}.
-     * </p>
+     * <br>
      * This is only applicable to {@link Type#INTEGER} and {@link Type#NUMBER} types.
      * @return The minimum value a user is allowed to input if present, otherwise {@link Optional#empty()}.
      */
@@ -208,7 +208,7 @@ public class ApplicationCommandOption implements DiscordObject {
 
     /**
      * Returns the maximum value a user is allowed to input, represented as a {@link Double}.
-     * </p>
+     * <br>
      * This is only applicable to {@link Type#INTEGER} and {@link Type#NUMBER} types.
      * @return The maximum value a user is allowed to input if present, otherwise {@link Optional#empty()}.
      */
@@ -218,7 +218,7 @@ public class ApplicationCommandOption implements DiscordObject {
 
     /**
      * Returns the minimum length a user is allowed to input, represented as a {@link Integer}.
-     * </p>
+     * <br>
      * This is only applicable to {@link Type#STRING} type.
      * @return The minimum length a user is allowed to input if present, otherwise {@link Optional#empty()}.
      */
@@ -228,7 +228,7 @@ public class ApplicationCommandOption implements DiscordObject {
 
     /**
      * Returns the maximum length a user is allowed to input, represented as a {@link Integer}.
-     * </p>
+     * <br>
      * This is only applicable to {@link Type#STRING} type.
      * @return The maximum length a user is allowed to input if present, otherwise {@link Optional#empty()}.
      */

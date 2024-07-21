@@ -58,6 +58,7 @@ public class ApplicationCommandInteraction implements DiscordObject {
      *
      * @param gateway The {@link GatewayDiscordClient} associated to this object, must be non-null.
      * @param data The raw data as represented by Discord, must be non-null.
+     * @param guildId the ID of the guild.
      */
     public ApplicationCommandInteraction(final GatewayDiscordClient gateway,
                                          final ApplicationCommandInteractionData data,

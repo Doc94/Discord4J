@@ -47,6 +47,7 @@ public class RestRole {
      * Create a {@link RestRole} for the given parameters. This method does not perform any API request.
      *
      * @param restClient the client to make API requests
+     * @param guildId the ID of the guild
      * @param id the ID of this entity
      * @return a {@code RestRole} represented by the given parameters.
      */

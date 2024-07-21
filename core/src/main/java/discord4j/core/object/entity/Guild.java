@@ -2021,6 +2021,7 @@ public final class Guild implements Entity {
     /**
      * Requests to retrieve the automod rule of the guild using the ID. Requires the MANAGE_GUILD permission.
      *
+     * @param autoModRuleId the ID of the automod rule
      * @return A {@link Mono} of {@link AutoModRule} for this guild if present, or empty otherwise.
      */
     public Mono<AutoModRule> getAutoModRule(Snowflake autoModRuleId) {
@@ -2082,6 +2083,7 @@ public final class Guild implements Entity {
     /**
      * Request to create a test entitlement for the guild with the provided SKU ID.
      *
+     * @param skuId the ID of the SKU
      * @return A {@link CreateTestEntitlementMono} which emits the created {@link discord4j.core.object.monetization.Entitlement}.
      * If an error is received, it is emitted through the {@link Mono}.
      */

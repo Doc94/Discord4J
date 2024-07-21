@@ -62,6 +62,7 @@ public class MultipartRequest<T> {
     }
 
     /**
+     * @return the {@link MessageCreateRequest}
      * @deprecated Use {@link #getJsonPayload()} instead.
      */
     @Deprecated

@@ -69,6 +69,7 @@ public class RestGuildTemplate {
      * <p>
      * This endpoint can be used only by bots in less than 10 guilds.
      *
+     * @param request the template to use
      * @return a guild object
      */
     public Mono<GuildData> createGuild(TemplateCreateGuildRequest request) {

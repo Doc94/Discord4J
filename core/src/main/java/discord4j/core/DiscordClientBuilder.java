@@ -38,6 +38,7 @@ public final class DiscordClientBuilder<C, O extends RouterOptions> extends Rest
      * Initialize a new builder with the given token.
      *
      * @param token the bot token used to authenticate to Discord
+     * @return a new instance of DiscordClientBuilder
      */
     public static DiscordClientBuilder<DiscordClient, RouterOptions> create(String token) {
         Function<Config, DiscordClient> clientFactory = config -> {

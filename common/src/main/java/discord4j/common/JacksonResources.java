@@ -95,6 +95,8 @@ public class JacksonResources {
 
     /**
      * Create with a pre-configured {@link ObjectMapper} for all Discord4J related operations.
+     *
+     * @return a new {@link JacksonResources} instance
      */
     public static JacksonResources create() {
         return new JacksonResources(HANDLE_UNKNOWN_PROPERTIES);
@@ -102,6 +104,9 @@ public class JacksonResources {
 
     /**
      * Create based on {@link ObjectMapper} applying on it all changes required for Discord4J related operations.
+     *
+     * @param objectMapper the {@link ObjectMapper} to apply
+     * @return a new {@link JacksonResources} instance
      */
     public static JacksonResources createFromObjectMapper(ObjectMapper objectMapper) {
         return new JacksonResources(INITIALIZER.andThen(HANDLE_UNKNOWN_PROPERTIES).apply(objectMapper));

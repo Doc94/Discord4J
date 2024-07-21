@@ -66,6 +66,7 @@ public class DiscordWebClient {
      * @param authorizationScheme default scheme to use with the authorization header, like "Bot" or "Bearer"
      * @param token default Discord token for API authorization
      * @param responseFunctions a list of {@link ResponseFunction} transformations
+     * @param discordBaseUrl default discord api <a href="https://discord.com/developers/docs/reference#base-url">base url</a>
      */
     public DiscordWebClient(HttpClient httpClient, ExchangeStrategies exchangeStrategies,
                             String authorizationScheme, String token,

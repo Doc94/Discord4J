@@ -52,7 +52,7 @@ import java.util.function.Consumer;
  * <p>
  * This is not directly dispatched by Discord, but is a utility specialization of {@link InteractionCreateEvent}.
  * <p>
- * <img src="doc-files/InteractionCreateEvent.png">
+ * <img alt="InteractionCreateEvent" src="doc-files/InteractionCreateEvent.png">
  */
 public class ComponentInteractionEvent extends DeferrableInteractionEvent {
 

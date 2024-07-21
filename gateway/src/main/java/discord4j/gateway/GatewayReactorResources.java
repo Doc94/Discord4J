@@ -107,6 +107,7 @@ public class GatewayReactorResources extends ReactorResources {
      * Returns a new builder to create {@link GatewayReactorResources} from a pre-configured {@link ReactorResources},
      * copying its settings.
      *
+     * @param reactorResources {@link ReactorResources} to use to pre-configure the {@link GatewayReactorResources}
      * @return a builder to create {@link GatewayReactorResources} with settings copied from parent resources
      */
     public static GatewayReactorResources.Builder builder(ReactorResources reactorResources) {

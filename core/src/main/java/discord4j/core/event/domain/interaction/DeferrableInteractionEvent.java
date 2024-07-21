@@ -66,7 +66,7 @@ import java.util.function.Consumer;
  *
  * @see <a href="https://discord.com/developers/docs/topics/gateway#interaction-create">Interaction Create</a>
  * <p>
- * <img src="doc-files/InteractionCreateEvent.png">
+ * <img alt="InteractionCreateEvent" src="doc-files/InteractionCreateEvent.png">
  */
 @Experimental
 public class DeferrableInteractionEvent extends InteractionCreateEvent {

@@ -117,6 +117,7 @@ public class VoiceReactorResources extends ReactorResources {
      * Returns a new builder to create {@link VoiceReactorResources} from a pre-configured {@link ReactorResources},
      * copying its settings.
      *
+     * @param reactorResources a pre-configured {@link ReactorResources}
      * @return a builder to create {@link VoiceReactorResources} with settings copied from parent resources
      */
     public static VoiceReactorResources.Builder builder(ReactorResources reactorResources) {

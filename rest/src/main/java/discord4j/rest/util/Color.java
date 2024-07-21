@@ -136,6 +136,7 @@ public final class Color {
      * as string.
      *
      * @param hexColor the hex color in a valid format (#ffffff or ffffff)
+     * @return a new instance of {@link Color}
      */
     public static Color of(String hexColor) {
         hexColor = hexColor.replace("#", "");
@@ -155,6 +156,7 @@ public final class Color {
      * @param red The red component of the RGB value.
      * @param green The green component of the RGB value.
      * @param blue The blue component of the RGB value.
+     * @return a new instance of {@link Color}
      */
     public static Color of(final float red, final float green, final float blue) {
         return of((int) (red * 255.0F + 0.5F), (int) (green * 255.0F + 0.5F), (int) (blue * 255.0F + 0.5F));
@@ -167,6 +169,7 @@ public final class Color {
      * @param red The red component of the RGB value.
      * @param green The green component of the RGB value.
      * @param blue The blue component of the RGB value.
+     * @return a new instance of {@link Color}
      */
     public static Color of(final int red, final int green, final int blue) {
         if ((red & 0xFF) != red || (green & 0xFF) != green || (blue & 0xFF) != blue) {
@@ -184,6 +187,7 @@ public final class Color {
      * in bits 8-15, and red in bits 16-23.
      *
      * @param rgb The RGB value.
+     * @return a new instance of {@link Color}
      */
     public static Color of(final int rgb) {
         return new Color(rgb & 0xFFFFFF);

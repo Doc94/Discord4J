@@ -46,6 +46,7 @@ public class ApplicationCommandPermission implements DiscordObject {
      * {@link GatewayDiscordClient} and Discord data.
      *
      * @param gateway the {@link GatewayDiscordClient} associated to this object, must be non-null.
+     * @param guildId the ID of the guild.
      * @param data the raw data as represented by Discord, must be non-null.
      */
     public ApplicationCommandPermission(GatewayDiscordClient gateway, Snowflake guildId,

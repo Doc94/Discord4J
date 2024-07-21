@@ -223,6 +223,7 @@ public interface EntityRetriever {
     /**
      * Requests to retrieve the guild's automod rules.
      *
+     * @param guildId the ID of the guild
      * @return A {@link Flux} that continually emits the guild's {@link AutoModRule AutoModRule}. If an error is received,
      * it is emitted through the {@code Flux}.
      */
@@ -241,6 +242,7 @@ public interface EntityRetriever {
     /**
      * Requests to retrieve the guild's scheduled events.
      *
+     * @param guildId the ID of the guild
      * @return A {@link Flux} that continually emits the guild's {@link ScheduledEvent events}. If an error is received,
      * it is emitted through the {@code Flux}.
      */
@@ -249,6 +251,8 @@ public interface EntityRetriever {
     /**
      * Requests to retrieve the users that subscribed to the event represented by the supplied IDs.
      *
+     * @param guildId the ID of the guild
+     * @param eventId the ID of the event
      * @return A {@link Flux} that continually emits the event's {@link ScheduledEventUser users}.
      * If an error is received, it is emitted through the {@code Flux}.
      */

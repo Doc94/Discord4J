@@ -90,7 +90,7 @@ allprojects {
             tags = ["apiNote:a:API Note:",
                     "implSpec:a:Implementation Requirements:",
                     "implNote:a:Implementation Note:"]
-            addStringOption 'Xdoclint:none', '-quiet'
+            //addStringOption 'Xdoclint:none', '-quiet'
             addStringOption 'encoding', 'UTF-8'
             // adding links to javadocs for filling specific classes when not existing inside current javadoc
             links = [
